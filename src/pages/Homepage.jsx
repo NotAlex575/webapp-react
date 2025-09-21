@@ -4,13 +4,13 @@ import { useState, useEffect } from "react"
 const Homepage = () => {
 
     //definizioni delle variabili di stato
-    const [movie, setMovies] = useState([]);
+    const [movies, setMovies] = useState([]);
 
     // function che recupera i film tramite chiamata ajax
     const fetchMovies = () => {
         axios.get("http://localhost:3000/movies")
         .then((resp) => {
-            setBooks(resp.data);
+            setMovies(resp.data);
             console.log(resp.data);
         })
         .catch((err) => console.log(err));
@@ -30,71 +30,23 @@ const Homepage = () => {
                     </div>
                 </div>
                 <div className="row gy-3">
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="card">
-                            <img 
-                                src = "./img/sample.jpg" 
-                                className="img-fluid"
-                                alt = "film"
-                            /> 
-                            <div className="overlay">
-                                <h2 className="text-center my-3">titolo</h2>
-                                <p className="text-center">autore</p>
+                    {movies.map(movie => {
+                        return (
+                            <div className="col-12 col-md-6 col-lg-4" key={movie.id}>
+                                <div className="card">
+                                    <img 
+                                        src = {movie.image} 
+                                        className="img-fluid"
+                                        alt = {movie.director}
+                                    /> 
+                                    <div className="overlay">
+                                        <h2 className="text-center my-3">{movie.title}</h2>
+                                        <p className="text-center">{movie.genre}</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="card">
-                            <img 
-                                src = "./img/sample.jpg" 
-                                className="img-fluid"
-                                alt = "film"
-                            /> 
-                            <div className="overlay">
-                                <h2 className="text-center my-3">titolo</h2>
-                                <p className="text-center">autore</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="card">
-                            <img 
-                                src = "./img/sample.jpg" 
-                                className="img-fluid"
-                                alt = "film"
-                            /> 
-                            <div className="overlay">
-                                <h2 className="text-center my-3">titolo</h2>
-                                <p className="text-center">autore</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="card">
-                            <img 
-                                src = "./img/sample.jpg" 
-                                className="img-fluid"
-                                alt = "film"
-                            /> 
-                            <div className="overlay">
-                                <h2 className="text-center my-3">titolo</h2>
-                                <p className="text-center">autore</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="card">
-                            <img 
-                                src = "./img/sample.jpg" 
-                                className="img-fluid"
-                                alt = "film"
-                            /> 
-                            <div className="overlay">
-                                <h2 className="text-center my-3">titolo</h2>
-                                <p className="text-center">autore</p>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
             </div>
     )
