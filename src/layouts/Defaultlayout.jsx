@@ -1,6 +1,12 @@
+import { Outlet } from "react-router-dom"
+import Navbar from "../components/Navbar"
+
 const Defaultlayout = () => {
   return (
-    <div>Defaultlayout</div>
+    <>
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+    </>
   )
 }
 

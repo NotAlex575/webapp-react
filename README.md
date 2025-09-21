@@ -50,3 +50,14 @@ app.jsx
 -   -   -   homepage
 -   -   -   -   Lista Film completi (router -> "/") (props: book)
 -   -   -   -   Lista Film singolo (router -> ":id") (props: book)
+
+
+___________________________________________________________
+
+eseguiamo la milestone 1, installando tutti i package richiesti
+
+creiamo una cartella layouts in src, e creiamo un file chiamato Defaultlayout.jsx, che sarà il contenuto visibile in tutte le pagine (ci sarà una navbar contenente tutti i link cliccabili e l'outlet che sarebbe il contenuto sotto alla navbar)
+
+in app.jsx inseriamo tutti gli import necessari, e creiamo lo scheletro del BrowserRouter con il BrowserRouter > Routes > Route element Defaultlayout
+
+creiamo uno scheletro di 2 pagine (1 homepage e l'altra oneFilm) e le inseriamo in una route all'interno della route di Defaultlayout (con le loro route definite)
