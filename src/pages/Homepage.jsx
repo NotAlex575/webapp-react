@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import Filmcard from "../components/Filmcard";
 
 const Homepage = () => {
 
@@ -31,21 +32,8 @@ const Homepage = () => {
                 </div>
                 <div className="row gy-3">
                     {movies.map(movie => {
-                        return (
-                            <div className="col-12 col-md-6 col-lg-4" key={movie.id}>
-                                <div className="card">
-                                    <img 
-                                        src = {movie.image} 
-                                        className="img-fluid"
-                                        alt = {movie.director}
-                                    /> 
-                                    <div className="overlay">
-                                        <h2 className="text-center my-3">{movie.title}</h2>
-                                        <p className="text-center">{movie.genre}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        )
+                        const { id } = movie
+                        return <Filmcard key={id} movie = {movie}></Filmcard>
                     })}
                 </div>
             </div>
