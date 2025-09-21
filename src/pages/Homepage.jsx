@@ -23,8 +23,6 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="row gy-3">
                 <div className="col-12 col-md-6 col-lg-4">
                     <div className="card">
                         <img 
@@ -38,8 +36,6 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="row gy-3">
                 <div className="col-12 col-md-6 col-lg-4">
                     <div className="card">
                         <img 
@@ -53,8 +49,6 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="row gy-3">
                 <div className="col-12 col-md-6 col-lg-4">
                     <div className="card">
                         <img 
@@ -68,8 +62,6 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="row gy-3">
                 <div className="col-12 col-md-6 col-lg-4">
                     <div className="card">
                         <img 

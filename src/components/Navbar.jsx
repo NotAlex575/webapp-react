@@ -1,6 +1,8 @@
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <header className="bg-orange">
+        <h1>Questa è la navbar dei FILM!</h1>
+    </header>
   )
 }
 
