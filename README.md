@@ -61,3 +61,5 @@ creiamo una cartella layouts in src, e creiamo un file chiamato Defaultlayout.js
 in app.jsx inseriamo tutti gli import necessari, e creiamo lo scheletro del BrowserRouter con il BrowserRouter > Routes > Route element Defaultlayout
 
 creiamo uno scheletro di 2 pagine (1 homepage e l'altra oneFilm) e le inseriamo in una route all'interno della route di Defaultlayout (con le loro route definite)
+
+all'interno del file webapp-react (dove ci sta il back-end) inseriamo il .env, per permettere al front-end e al back-end la comunicazione tra loro (oltre che avere una sicurezza a livello di data sharing)
